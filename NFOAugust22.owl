@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#"
+     xml:base="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFlavour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFlavour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Flavour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasAshComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasAshComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasCalciumComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasCalciumComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasCarbohydrateComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasCarbohydrateComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasEnergyComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasEnergyComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFatComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFatComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFiberComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasFiberComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasProteinComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasProteinComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasWaterComposition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#hasWaterComposition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Cereal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Cereal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+        <rdfs:comment>in 1981 food composition list, we call this category as &quot;serelia dan hasil olahannya&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineCereal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineCereal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Cereal"/>
+        <rdfs:comment>in 1981 Indonesian food composition list, we call this category as &quot;masakan menggunakan serealia&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineFruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineFruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fruit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineMeatAndPoultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineMeatAndPoultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MeatAndPoultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineNuts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineNuts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineVegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#CuisineVegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Vegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Egg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Egg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#FatAndOil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#FatAndOil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Flavour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Flavour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MacroNutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MacroNutrient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MeatAndPoultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MeatAndPoultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MicroNutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MicroNutrient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Milk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Milk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedCereal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedCereal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Cereal"/>
+        <rdfs:comment>in 1981 Indonesian food composition list, we call this category as &quot;produk olahan serealia&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedMeatAndPoultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedMeatAndPoultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MeatAndPoultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedNuts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedNuts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedTuber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedTuber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Tuber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedVegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#ProcessedVegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Vegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawCereal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawCereal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Cereal"/>
+        <rdfs:comment>in 1981 Indonesian food composition list, we call this category as &quot;Bahan mentah serealia&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawFruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawFruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Fruit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawMeatAndPoultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawMeatAndPoultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#MeatAndPoultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawNuts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawNuts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Nut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawTuber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawTuber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Tuber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawVegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#RawVegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Vegetable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe">
+        <rdfs:comment>the main group of Nusantara&apos;s Food and Beverage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Spice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Spice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#SugarAndSyrup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#SugarAndSyrup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Tuber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Tuber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+        <rdfs:comment>in 1981 food composition list, we call this category as &quot;Umbi berpati dan hasil olahannya&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#telur_rebus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#telur_rebus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bagindokemas/ontologies/2022/3/NFOversi2#Egg"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
