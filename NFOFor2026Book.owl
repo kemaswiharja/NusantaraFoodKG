@@ -1,0 +1,671 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nusantara#"
+     xml:base="http://www.semanticweb.org/nusantara"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:nus="http://www.semanticweb.org/nusantara#">
+
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nusantara">
+        <rdfs:label>Ontologi Masakan dan Minuman Nusantara</rdfs:label>
+        <rdfs:comment>Ontologi contoh untuk Bab 11 (struktur OD101) dan Bab 12 (rules SWRL) buku ajar Semantic Web. Nusantara mencakup Indonesia, Malaysia, Singapura, dan Brunei Darussalam.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- ============================================================ -->
+    <!-- BAB 11: CLASS UTAMA (HIRARKI LEVEL 1)                         -->
+    <!-- ============================================================ -->
+
+    <owl:Class rdf:about="#Serelia_dan_olahan"><rdfs:label>Serelia dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Umbi_dan_olahan"><rdfs:label>Umbi dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Kacang_dan_olahan"><rdfs:label>Kacang dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Sayuran_dan_olahan"><rdfs:label>Sayuran dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Buah_dan_olahan"><rdfs:label>Buah dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Daging_unggas_dan_olahan"><rdfs:label>Daging unggas dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Ikan_dan_olahan"><rdfs:label>Ikan dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Telur_dan_olahan"><rdfs:label>Telur dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Susu_dan_olahan"><rdfs:label>Susu dan olahan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Lemak_dan_minyak"><rdfs:label>Lemak dan minyak</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Gula_sirup_konfeksioneri"><rdfs:label>Gula sirup konfeksioneri</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Bumbu"><rdfs:label>Bumbu</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Minuman"><rdfs:label>Minuman</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Waktu_makan"><rdfs:label>Waktu makan</rdfs:label></owl:Class>
+
+    <!-- ============================================================ -->
+    <!-- BAB 11: HIRARKI LEVEL 2                                       -->
+    <!-- ============================================================ -->
+
+    <owl:Class rdf:about="#Serelia_mentah"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Serelia mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Serelia_terolah"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Serelia terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Serelia_masakan"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Serelia masakan</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Varietas_mie"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Varietas mie</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Kue_basah"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Kue basah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Kue_kering"><rdfs:subClassOf rdf:resource="#Serelia_dan_olahan"/><rdfs:label>Kue kering</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Umbi_mentah"><rdfs:subClassOf rdf:resource="#Umbi_dan_olahan"/><rdfs:label>Umbi mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Umbi_terolah"><rdfs:subClassOf rdf:resource="#Umbi_dan_olahan"/><rdfs:label>Umbi terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Umbi_masakan"><rdfs:subClassOf rdf:resource="#Umbi_dan_olahan"/><rdfs:label>Umbi masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Kacang_mentah"><rdfs:subClassOf rdf:resource="#Kacang_dan_olahan"/><rdfs:label>Kacang mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Kacang_terolah"><rdfs:subClassOf rdf:resource="#Kacang_dan_olahan"/><rdfs:label>Kacang terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Kacang_masakan"><rdfs:subClassOf rdf:resource="#Kacang_dan_olahan"/><rdfs:label>Kacang masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Sayuran_mentah"><rdfs:subClassOf rdf:resource="#Sayuran_dan_olahan"/><rdfs:label>Sayuran mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Sayuran_terolah"><rdfs:subClassOf rdf:resource="#Sayuran_dan_olahan"/><rdfs:label>Sayuran terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Sayuran_masakan"><rdfs:subClassOf rdf:resource="#Sayuran_dan_olahan"/><rdfs:label>Sayuran masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Buah_mentah"><rdfs:subClassOf rdf:resource="#Buah_dan_olahan"/><rdfs:label>Buah mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Buah_masakan"><rdfs:subClassOf rdf:resource="#Buah_dan_olahan"/><rdfs:label>Buah masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Daging_unggas_mentah"><rdfs:subClassOf rdf:resource="#Daging_unggas_dan_olahan"/><rdfs:label>Daging unggas mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Daging_unggas_terolah"><rdfs:subClassOf rdf:resource="#Daging_unggas_dan_olahan"/><rdfs:label>Daging unggas terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Daging_unggas_masakan"><rdfs:subClassOf rdf:resource="#Daging_unggas_dan_olahan"/><rdfs:label>Daging unggas masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Ikan_mentah"><rdfs:subClassOf rdf:resource="#Ikan_dan_olahan"/><rdfs:label>Ikan mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Ikan_terolah"><rdfs:subClassOf rdf:resource="#Ikan_dan_olahan"/><rdfs:label>Ikan terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Ikan_masakan"><rdfs:subClassOf rdf:resource="#Ikan_dan_olahan"/><rdfs:label>Ikan masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Telur_mentah"><rdfs:subClassOf rdf:resource="#Telur_dan_olahan"/><rdfs:label>Telur mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Telur_terolah"><rdfs:subClassOf rdf:resource="#Telur_dan_olahan"/><rdfs:label>Telur terolah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Telur_masakan"><rdfs:subClassOf rdf:resource="#Telur_dan_olahan"/><rdfs:label>Telur masakan</rdfs:label></owl:Class>
+
+    <owl:Class rdf:about="#Susu_mentah"><rdfs:subClassOf rdf:resource="#Susu_dan_olahan"/><rdfs:label>Susu mentah</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Susu_terolah"><rdfs:subClassOf rdf:resource="#Susu_dan_olahan"/><rdfs:label>Susu terolah</rdfs:label></owl:Class>
+
+    <!-- Class Sambal sebagai turunan Bumbu (dipakai rule 12.4.4) -->
+    <owl:Class rdf:about="#Sambal"><rdfs:subClassOf rdf:resource="#Bumbu"/><rdfs:label>Sambal</rdfs:label></owl:Class>
+
+    <!-- Class tambahan dari CQ: Rasa dan Daerah_di_Nusantara -->
+    <owl:Class rdf:about="#Rasa"><rdfs:label>Rasa</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Daerah_di_Nusantara"><rdfs:label>Daerah di Nusantara</rdfs:label></owl:Class>
+
+    <!-- ============================================================ -->
+    <!-- BAB 12: CLASS PENDUKUNG (HASIL PENURUNAN RULE)               -->
+    <!-- Class-class ini sengaja dibuat kosong; akan diisi oleh rule  -->
+    <!-- ============================================================ -->
+
+    <owl:Class rdf:about="#Masakan_Laut"><rdfs:label>Masakan Laut (hasil rule 12.4.1)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Pedas"><rdfs:label>Masakan Pedas (hasil rule 12.4.1)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Berminyak"><rdfs:label>Masakan Berminyak (hasil rule 12.4.3)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Berlemak_Tinggi"><rdfs:label>Masakan Berlemak Tinggi (hasil rule 12.3)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Berisiko"><rdfs:label>Masakan Berisiko (hasil rule 12.4.3)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Sehat"><rdfs:label>Masakan Sehat (hasil rule 12.4.3)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Berenergi_Tinggi"><rdfs:label>Masakan Berenergi Tinggi (hasil rule 12.4.3)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Masakan_Sunda_Pedas"><rdfs:label>Masakan Sunda Pedas (hasil rule 12.4.4)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Minuman_Beralkohol"><rdfs:label>Minuman Beralkohol</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Minuman_Beralkohol_Papua"><rdfs:label>Minuman Beralkohol Papua (hasil rule 12.4.4)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Sambal_Khas_Sumatera_Utara"><rdfs:label>Sambal Khas Sumatera Utara (hasil rule 12.4.4)</rdfs:label></owl:Class>
+    <owl:Class rdf:about="#Perlu_Diperiksa"><rdfs:label>Perlu Diperiksa (hasil rule 12.4.5)</rdfs:label></owl:Class>
+
+    <!-- ============================================================ -->
+    <!-- BAB 11 + 12: OBJECT PROPERTIES                               -->
+    <!-- ============================================================ -->
+
+    <owl:ObjectProperty rdf:about="#punyaRasa"><rdfs:label>punyaRasa</rdfs:label><rdfs:range rdf:resource="#Rasa"/></owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#berasalDari"><rdfs:label>berasalDari</rdfs:label><rdfs:range rdf:resource="#Daerah_di_Nusantara"/></owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#terbuatDari"><rdfs:label>terbuatDari</rdfs:label></owl:ObjectProperty>
+
+    <!-- Object property tambahan untuk Bab 12 -->
+    <owl:ObjectProperty rdf:about="#cocokDisantapSetelah"><rdfs:label>cocokDisantapSetelah (rule 12.4.2)</rdfs:label></owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#seasalDengan"><rdfs:label>seasalDengan (rule 12.4.2)</rdfs:label></owl:ObjectProperty>
+
+    <!-- ============================================================ -->
+    <!-- BAB 11: DATA PROPERTIES                                      -->
+    <!-- ============================================================ -->
+
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiKalsium"><rdfs:label>punyaKomposisiKalsium</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiKarbohidrat"><rdfs:label>punyaKomposisiKarbohidrat</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiLemak"><rdfs:label>punyaKomposisiLemak</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiProtein"><rdfs:label>punyaKomposisiProtein</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiSerat"><rdfs:label>punyaKomposisiSerat</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiEnergi"><rdfs:label>punyaKomposisiEnergi</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#punyaKomposisiAir"><rdfs:label>punyaKomposisiAir</rdfs:label><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+
+    <!-- ============================================================ -->
+    <!-- INDIVIDUAL: RASA                                             -->
+    <!-- ============================================================ -->
+    <owl:NamedIndividual rdf:about="#pedas"><rdf:type rdf:resource="#Rasa"/><rdfs:label>pedas</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#asam"><rdf:type rdf:resource="#Rasa"/><rdfs:label>asam</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#asin"><rdf:type rdf:resource="#Rasa"/><rdfs:label>asin</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#gurih"><rdf:type rdf:resource="#Rasa"/><rdfs:label>gurih</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#tawar"><rdf:type rdf:resource="#Rasa"/><rdfs:label>tawar</rdfs:label></owl:NamedIndividual>
+
+    <!-- ============================================================ -->
+    <!-- INDIVIDUAL: DAERAH                                           -->
+    <!-- ============================================================ -->
+    <owl:NamedIndividual rdf:about="#sunda"><rdf:type rdf:resource="#Daerah_di_Nusantara"/><rdfs:label>sunda</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#minang"><rdf:type rdf:resource="#Daerah_di_Nusantara"/><rdfs:label>minang</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#papua"><rdf:type rdf:resource="#Daerah_di_Nusantara"/><rdfs:label>papua</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#sumatera_utara"><rdf:type rdf:resource="#Daerah_di_Nusantara"/><rdfs:label>sumatera utara</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#betawi"><rdf:type rdf:resource="#Daerah_di_Nusantara"/><rdfs:label>betawi</rdfs:label></owl:NamedIndividual>
+
+    <!-- ============================================================ -->
+    <!-- INDIVIDUAL: BAHAN (IKAN MENTAH)                              -->
+    <!-- ============================================================ -->
+    <owl:NamedIndividual rdf:about="#ikan_tuna"><rdf:type rdf:resource="#Ikan_mentah"/><rdfs:label>ikan tuna</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#ikan_kembung"><rdf:type rdf:resource="#Ikan_mentah"/><rdfs:label>ikan kembung</rdfs:label></owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#ikan_teri"><rdf:type rdf:resource="#Ikan_mentah"/><rdfs:label>ikan teri</rdfs:label></owl:NamedIndividual>
+
+    <!-- ============================================================ -->
+    <!-- INDIVIDUAL: MASAKAN & MINUMAN (dengan data untuk uji rule)   -->
+    <!-- ============================================================ -->
+
+    <!-- Pempek: terbuat dari ikan (uji rule 12.4.1 Masakan_Laut) -->
+    <owl:NamedIndividual rdf:about="#pempek">
+        <rdf:type rdf:resource="#Ikan_masakan"/>
+        <rdfs:label>pempek</rdfs:label>
+        <terbuatDari rdf:resource="#ikan_tuna"/>
+        <berasalDari rdf:resource="#sumatera_utara"/>
+        <punyaRasa rdf:resource="#gurih"/>
+        <punyaKomposisiLemak rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</punyaKomposisiLemak>
+        <punyaKomposisiKarbohidrat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</punyaKomposisiKarbohidrat>
+        <punyaKomposisiProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</punyaKomposisiProtein>
+    </owl:NamedIndividual>
+
+    <!-- Rendang: berlemak tinggi, dari minang (uji rule 12.3 & 12.4.3) -->
+    <owl:NamedIndividual rdf:about="#rendang">
+        <rdf:type rdf:resource="#Daging_unggas_masakan"/>
+        <rdfs:label>rendang</rdfs:label>
+        <berasalDari rdf:resource="#minang"/>
+        <punyaRasa rdf:resource="#pedas"/>
+        <punyaKomposisiLemak rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</punyaKomposisiLemak>
+        <punyaKomposisiKarbohidrat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</punyaKomposisiKarbohidrat>
+        <punyaKomposisiProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</punyaKomposisiProtein>
+    </owl:NamedIndividual>
+
+    <!-- Karedok: masakan sunda pedas (uji rule 12.4.4) -->
+    <owl:NamedIndividual rdf:about="#karedok">
+        <rdf:type rdf:resource="#Sayuran_masakan"/>
+        <rdfs:label>karedok</rdfs:label>
+        <berasalDari rdf:resource="#sunda"/>
+        <punyaRasa rdf:resource="#pedas"/>
+        <punyaKomposisiLemak rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</punyaKomposisiLemak>
+    </owl:NamedIndividual>
+
+    <!-- Sup konro: berminyak, sehat rendah lemak? (uji 12.4.2, 12.4.3) -->
+    <owl:NamedIndividual rdf:about="#sup_konro">
+        <rdf:type rdf:resource="#Daging_unggas_masakan"/>
+        <rdfs:label>sup konro</rdfs:label>
+        <berasalDari rdf:resource="#sunda"/>
+        <punyaRasa rdf:resource="#gurih"/>
+        <punyaKomposisiLemak rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</punyaKomposisiLemak>
+    </owl:NamedIndividual>
+
+    <!-- Es cendol: minuman asam segar (uji rule 12.4.2 cocokDisantapSetelah) -->
+    <owl:NamedIndividual rdf:about="#es_cendol">
+        <rdf:type rdf:resource="#Minuman"/>
+        <rdfs:label>es cendol</rdfs:label>
+        <berasalDari rdf:resource="#sunda"/>
+        <punyaRasa rdf:resource="#asam"/>
+    </owl:NamedIndividual>
+
+    <!-- Sambal matah: sambal (untuk contoh, diberi asal sumatera_utara untuk uji 12.4.4) -->
+    <owl:NamedIndividual rdf:about="#sambal_lado">
+        <rdf:type rdf:resource="#Sambal"/>
+        <rdfs:label>sambal lado</rdfs:label>
+        <berasalDari rdf:resource="#sumatera_utara"/>
+        <punyaRasa rdf:resource="#pedas"/>
+    </owl:NamedIndividual>
+
+    <!-- Data cacat sengaja: lemak negatif (uji rule validasi 12.4.5) -->
+    <owl:NamedIndividual rdf:about="#data_uji_cacat">
+        <rdf:type rdf:resource="#Sayuran_masakan"/>
+        <rdfs:label>data uji cacat</rdfs:label>
+        <punyaKomposisiLemak rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3</punyaKomposisiLemak>
+    </owl:NamedIndividual>
+
+    <!-- ============================================================ -->
+    <!-- BAB 12: RULES SWRL                                           -->
+    <!-- Ditulis dalam SWRL/RDF. Protege akan menampilkannya di       -->
+    <!-- SWRLTab. Setiap Imp = satu rule.                             -->
+    <!-- ============================================================ -->
+
+    <!-- RULE 12.3 : Masakan_Berlemak_Tinggi -->
+    <swrl:Imp rdf:about="#Rule_12_3_BerlemakTinggi">
+        <rdfs:label>12.3 Masakan Berlemak Tinggi</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Serelia_masakan"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#punyaKomposisiLemak"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#lemak"/>
+                            </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:BuiltinAtom>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="urn:swrl#lemak"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </swrl:arguments>
+                                    </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Berlemak_Tinggi"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#m"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.1a : Masakan_Laut -->
+    <swrl:Imp rdf:about="#Rule_12_4_1a_MasakanLaut">
+        <rdfs:label>12.4.1 Masakan Laut</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#terbuatDari"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#bahan"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="#Ikan_mentah"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#bahan"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Laut"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.1b : Masakan_Pedas -->
+    <swrl:Imp rdf:about="#Rule_12_4_1b_MasakanPedas">
+        <rdfs:label>12.4.1 Masakan Pedas</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#punyaRasa"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="#pedas"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Pedas"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.2b : seasalDengan (property-derivation, pola segitiga) -->
+    <swrl:Imp rdf:about="#Rule_12_4_2b_Seasal">
+        <rdfs:label>12.4.2 seasalDengan</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#berasalDari"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#daerah"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#berasalDari"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#masakan2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#daerah"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#seasalDengan"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#masakan2"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.3a : Masakan_Berisiko (lemak > 20) -->
+    <swrl:Imp rdf:about="#Rule_12_4_3a_Berisiko">
+        <rdfs:label>12.4.3 Masakan Berisiko</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#punyaKomposisiLemak"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#lemak"/>
+                    </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="urn:swrl#lemak"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Berisiko"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.3c : Masakan_Berenergi_Tinggi (perhitungan bertahap) -->
+    <swrl:Imp rdf:about="#Rule_12_4_3c_BerenergiTinggi">
+        <rdfs:label>12.4.3 Masakan Berenergi Tinggi</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#punyaKomposisiKarbohidrat"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#karbo"/>
+                    </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#punyaKomposisiProtein"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#protein"/>
+                            </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:BuiltinAtom>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                        <swrl:arguments>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="urn:swrl#jumlah"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="urn:swrl#karbo"/>
+                                                        <rdf:rest>
+                                                            <rdf:List>
+                                                                <rdf:first rdf:resource="urn:swrl#protein"/>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:List>
+                                                        </rdf:rest>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </swrl:arguments>
+                                    </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:BuiltinAtom>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                <swrl:arguments>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="urn:swrl#totalKalori"/>
+                                                        <rdf:rest>
+                                                            <rdf:List>
+                                                                <rdf:first rdf:resource="urn:swrl#jumlah"/>
+                                                                <rdf:rest>
+                                                                    <rdf:List>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:List>
+                                                                </rdf:rest>
+                                                            </rdf:List>
+                                                        </rdf:rest>
+                                                    </rdf:List>
+                                                </swrl:arguments>
+                                            </swrl:BuiltinAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:first>
+                                                    <swrl:BuiltinAtom>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:List>
+                                                                <rdf:first rdf:resource="urn:swrl#totalKalori"/>
+                                                                <rdf:rest>
+                                                                    <rdf:List>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:List>
+                                                                </rdf:rest>
+                                                            </rdf:List>
+                                                        </swrl:arguments>
+                                                    </swrl:BuiltinAtom>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Berenergi_Tinggi"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.4a : Masakan_Sunda_Pedas -->
+    <swrl:Imp rdf:about="#Rule_12_4_4a_SundaPedas">
+        <rdfs:label>12.4.4 Masakan Sunda Pedas</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#berasalDari"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="#sunda"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#punyaRasa"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                                <swrl:argument2 rdf:resource="#pedas"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Masakan_Sunda_Pedas"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.4c : Sambal_Khas_Sumatera_Utara -->
+    <swrl:Imp rdf:about="#Rule_12_4_4c_SambalSumut">
+        <rdfs:label>12.4.4 Sambal Khas Sumatera Utara</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Sambal"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#sambal"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#berasalDari"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#sambal"/>
+                                <swrl:argument2 rdf:resource="#sumatera_utara"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Sambal_Khas_Sumatera_Utara"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#sambal"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+    <!-- RULE 12.4.5 : Perlu_Diperiksa (validasi lemak < 0) -->
+    <swrl:Imp rdf:about="#Rule_12_4_5_Validasi">
+        <rdfs:label>12.4.5 Perlu Diperiksa</rdfs:label>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#punyaKomposisiLemak"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#lemak"/>
+                    </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:first>
+                            <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="urn:swrl#lemak"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                </rdf:rest>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="#Perlu_Diperiksa"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#masakan"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+
+</rdf:RDF>
